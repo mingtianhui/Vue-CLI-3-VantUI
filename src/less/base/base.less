@@ -1,0 +1,53 @@
+@color-main: #5785ea;
+@color-main-rgb: rgb(87, 133, 234);
+@color-red: #ed4276;
+@color-gray: #efefef;
+@color-gray-light: #f8f8f8;
+@color-white: #fff;
+@color-font: #333;
+@color-font-light: #666;
+@color-font-lighter: #999;
+
+/* 边框 */
+@border-color: #e2e2e2;
+@border-color-light: #f2f2f2;
+
+/* 字体大小 */
+@font-S:  24px;
+@font-M:  26px;
+@font-L:  28px;
+@font-XL:  30px;
+@font-XXL:  32px;
+@font-XXXL:  34px;
+@font-XXXXL:  36px;
+@font-B:  40px;
+
+/*包裹*/
+.mixin-content-wide(@width: 100%){
+  width: @width;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*超出省略*/
+.mixin-ellipsis{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+}
+/*居中*/
+.mixin-center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,205 @@
+// Created For: 全局公用 样式重置等
+// Author: chenLiYan.
+// Date: 2018/11/28 0028 10:53
+@import "base.less";
+html {
+    font:@font-XL/1.5 "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+html, body, header, section, footer, div, ul, ol, li, img, a, span, em, del, legend, center, strong, var, fieldset, form, label, dl, dt, dd, cite, input, hr, time, mark, code, figcaption, figure, textarea, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-style: normal;
+    -webkit-appearance: none;
+}
+
+html, body {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-user-select: none;
+    background-color: #fff;
+    height: 100%
+}
+
+body {
+    padding-top: constant(safe-area-inset-top);   //为导航栏+状态栏的高度 88px
+    padding-left: constant(safe-area-inset-left);   //如果未竖屏时为0
+    padding-right: constant(safe-area-inset-right); //如果未竖屏时为0
+    padding-bottom: constant(safe-area-inset-bottom);//为底下圆弧的高度 34px
+}
+
+nav, article, aside, details, main, header, footer, section, fieldset, figcaption, figure {
+    display: block;
+}
+
+img, a, button, em, del, strong, var, label, cite, small, time, mark, code, textarea {
+    display: inline-block;
+}
+
+header, section, footer {
+    position: relative;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+input, button, textarea, select {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    line-height: normal;
+    -webkit-appearance:none;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border-radius: 0;
+}
+span {
+    display: inline-block;
+}
+
+i, s {
+    font-style: normal;
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+label, .wordWrap {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+    padding: 0;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*自定义公用样式*/
+form, button, input, label, textarea, div, p, li {
+    box-sizing: border-box;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: @color-font-lighter
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: @color-font-lighter
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: @color-font-lighter
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: @color-font-lighter
+}
+input[type=search]::-webkit-search-cancel-button{
+    -webkit-appearance: none;//此处只是去掉默认的小×
+}
+input {
+    -webkit-appearance: none;
+}
+
+// 全局公用样式
+.none {
+    display: none
+}
+
+.ellipsis {
+    .mixin-ellipsis
+}
+.flex-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+}
+.flex-con {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+}
+.flex-auto{
+    flex: auto
+}
+.flex-none{
+    flex: none
+}
+.flex-vertical {
+    -webkit-box-orient: vertical;
+    -webkit-flex-flow: column;
+    flex-flow: column;
+}
+
+.flex-v-center {
+    align-items: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.text-lt {
+    text-align: left
+}
+
+.text-ct {
+    text-align: center
+}
+
+.text-rt {
+    text-align: right
+}
+.fl {
+    float: left
+}
+.fr {
+    float: right
+}
+#app {
+    color: @color-font;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: @font-XL;
+    height: 100%;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+//iphone X小黑条
+.home-indicator{
+    width: 100%;
+    height: env(safe-area-inset-bottom)
+}
+/*<!--解析之后在显示-->*/
+[v-cloak] {
+    display: none !important;
+}
+// vant搜索内容不居中样式
+.van-field__body{
+    height: 100%;
+}
+
